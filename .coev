@@ -1,0 +1,9 @@
+{
+  "folder": "/Users/joshuaporritt-fraser/learning-tracker",
+  "prompt": "Use tailwindcss, not plain css",
+  "webapp": "http://localhost:5174",
+  "selectedFiles": [
+    "/Users/joshuaporritt-fraser/learning-tracker/index.html"
+  ],
+  "apiKey": "97cec27c-1e17-40b8-b238-d60e9eb06d48"
+}
