@@ -5,6 +5,7 @@ const DAYS_IN_YEAR = 365;
 // DOM Elements
 const trackButton = document.getElementById('trackButton');
 const todayStatus = document.getElementById('todayStatus');
+const totalStatus = document.getElementById('totalStatus');
 const contributionGraph = document.getElementById('contributionGraph');
 
 // Initialize or load data
@@ -15,11 +16,17 @@ function formatDate(date) {
     return date.toISOString().split('T')[0];
 }
 
-// Update today's status
+// Calculate total hours
+function calculateTotalHours() {
+    return Object.values(learningData).reduce((sum, hours) => sum + hours, 0);
+}
+
+// Update status displays
 function updateTodayStatus() {
     const today = formatDate(new Date());
     const hoursToday = learningData[today] || 0;
     todayStatus.textContent = `Hours tracked today: ${hoursToday}`;
+    totalStatus.textContent = `Total hours tracked: ${calculateTotalHours()}`;
 }
 
 // Track learning time
